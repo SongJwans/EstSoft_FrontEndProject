@@ -1,0 +1,11 @@
+header {
+  background-color: #f2e9d8;
+}
+
+.header-cat {
+  display: inline-block;
+}
+.header-cat img {
+  width: 490px;
+  height: 890px;
+}
