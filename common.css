@@ -9,3 +9,10 @@ header {
   width: 490px;
   height: 890px;
 }
+
+.BodyFirst div {
+  display: inline-block;
+}
+.BodySecond {
+  text-align: center;
+}
