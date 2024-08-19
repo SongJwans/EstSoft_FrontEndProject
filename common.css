@@ -5,13 +5,15 @@
   max-width: 1280px; /* 최대 너비 설정 */
   margin: 0 auto; /* 중앙 정렬 */
 }
+body {
+  font-family: "Pretendard";
+}
 
 /* header 영역 작성 */
 header {
   background-color: #f2e9d8;
-  margin: 0 auto;
 }
-
+/* header bar 부분 */
 .navigation-bar {
   background-color: #f2e9d8;
   padding: 26px 20px;
@@ -42,29 +44,35 @@ header {
   color: white;
   background-color: #d97652;
 }
+
+/* header-content 부분 */
 .header-content {
   display: flex;
   justify-content: space-between;
-  margin-top: 32px;
 }
 
 .header-text-section {
   font-size: 16px;
   text-align: left;
 }
+
 .header-text-section h1 {
+  width: 695px;
+  height: 120px;
+
   font-size: 48px;
   font-weight: 700;
   line-height: 60px;
-  text-align: left;
 
   margin-top: 200px;
 }
 .header-text-section p {
+  width: 420px;
+  height: 86px;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  text-align: left;
 
   margin-top: 40px;
 }
@@ -72,10 +80,60 @@ header {
   margin-top: 40px;
   margin-left: 0;
 }
+
 .header-image-section img {
-  width: 100%;
-  max-width: 490px;
+  width: 415px;
   height: 890px;
+
+  margin-top: 32px;
+}
+
+/* header 모바일 웹 화면 구상 */
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .header-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-text-section {
+    text-align: center;
+  }
+
+  .header-text-section h1 {
+    width: 251px;
+    height: 90px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+  .header-text-section p {
+    width: 270px;
+    height: 98px;
+    top: 236px;
+    left: 57px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 30px;
+  }
+  .header-text-section button {
+    width: 114px;
+    height: 40px;
+    padding: 11px 24px 11px 24px;
+    margin-top: 30px;
+    border-radius: 40px;
+  }
+
+  .header-image-section img {
+    width: 197px;
+    height: 422px;
+    top: 434px;
+    left: 98px;
+    margin-top: 30px;
+  }
 }
 
 /* Body 영역 총 BodyFirst, BodySecond,BodyThird,subscribe 4가지 영역을 구분  */
@@ -91,53 +149,78 @@ header {
   width: 690px;
   height: 390px;
   object-fit: cover;
-  /* img를 꽉차게 하고싶은데 안됨.ㅠㅠ */
+
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px 0px #00000040;
 
   margin-top: 80px;
   margin-right: 110px;
 }
+.bodyfirst-text-section {
+  width: 510px;
+  text-align: left;
+}
 
 .bodyfirst-text-section h1 {
-  width: 510px;
   height: 135px;
 
   font-size: 36px;
   font-weight: 700;
   line-height: 45px;
-  text-align: left;
 }
 .bodyfirst-text-section p {
-  width: 510px;
   height: 40px;
 
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  text-align: left;
 
   margin-top: 30px;
 }
-/* Body Second */
-.bodysecond div {
-}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .BodyFirst {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .BodyFirst img {
+    width: 326px;
+    height: 190px;
 
+    margin: 40px 32px;
+  }
+  .bodyfirst-text-section {
+    width: 326px;
+    text-align: left;
+  }
+  .bodyfirst-text-section h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+
+    height: 90px;
+  }
+  .bodyfirst-text-section p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    height: 36px;
+  }
+}
+/* Body Second */
 .bodysecond-text-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 120px;
-}
-
-.bodysecond-text-section h4,
-.bodysecond-text-section p,
-.bodysecond-text-section span {
-  text-align: center;
   width: 100%;
+
+  margin-top: 120px;
 }
 
 .bodysecond-text-section {
-  margin-top: 120px;
   text-align: center;
 }
 .bodysecond-text-section h4 {
@@ -166,6 +249,7 @@ header {
   line-height: 20px;
   color: #d97652;
 }
+
 .bodysecond-image-section span {
   width: 1278px;
   margin-top: 88px;
@@ -195,7 +279,7 @@ header {
   text-align: center;
 }
 
-.frame5 p {
+.frame5 span {
   width: 290px;
   height: 30px;
 
@@ -218,8 +302,54 @@ header {
   height: 1px;
   color: #c4c4c4;
 }
-.BodyThird h2 {
-  width: 263px;
+/* Body second 모바일 웹 환경 */
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .bodysecond-text-section {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .bodysecond-text-section h4 {
+    width: 326px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+  .bodysecond-text-section p {
+    width: 326px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+  .bodysecond-image-section div {
+    width: 326px;
+    display: inline;
+  }
+  .frame3,
+  .frame4 {
+    display: block;
+  }
+  .frame3 img,
+  .frame4 img {
+    width: 326px;
+    height: 326px;
+    margin: 32px 32px 0 32px;
+  }
+  .frame5 {
+    width: 218px;
+    margin: 60px auto;
+  }
+  .frame5 span {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+/* Body Third */
+.bodythird h2 {
+  width: 268px;
   height: 45px;
   font-size: 36px;
   font-weight: 700;
@@ -229,7 +359,7 @@ header {
   margin-top: 63px;
   margin-bottom: 20px;
 }
-.BodyThird p {
+.bodythird p {
   width: 395px;
   height: 20px;
   font-size: 16px;
@@ -241,34 +371,64 @@ header {
 
   color: #606367;
 }
-.map {
-  width: 1278px;
-  height: 520px;
+.map img {
+  width: 100%;
+  height: auto;
 
-  gap: 0px;
   border-radius: 12px;
 }
+/* Body third 모바일 웹 환경 */
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .bodythird {
+    width: 100%;
+
+    max-width: 326px;
+    margin: 0 auto;
+  }
+
+  .bodythird-text-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .bodythird-text-section p {
+    /* width 100% 가 매우 중요 */
+    width: 100%;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .map img {
+    width: 100%;
+
+    height: auto;
+  }
+}
+
+/* subscribes */
 .subscribe {
   position: relative;
   left: 50%;
   transform: translate(-50%, 50%);
 
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   height: 200px;
 
   border-radius: 30px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   background-color: #263140;
   color: #fff;
 }
 .sub-text-group {
-  width: 471px;
-  height: 100px;
-  margin: 50px 0 51px 58px;
+  height: 100%;
+  height: 99px;
+
   text-align: left;
 }
 .sub-text-group h3 {
@@ -284,17 +444,18 @@ header {
 }
 .sub-email-group {
   width: 530px;
+
   height: 60px;
   position: relative;
   display: flex;
 }
 .sub-email-group input {
-  width: 530px;
+  width: 100%;
+
   border-radius: 60px;
   background: url(img/mail.png) no-repeat 28px center;
   background-size: 24px;
   padding-left: 68px;
-  margin-right: 58px;
 
   background-color: #fff;
   font-size: 16px;
@@ -307,16 +468,100 @@ header {
   border-radius: 40px;
   top: 5px;
   bottom: 5px;
-  right: 64px;
+  right: 6px;
+
   font-size: 16px;
   font-weight: 700;
   color: #fff;
   background-color: #d97652;
 }
-.sub-img {
-  width: 1920px;
+.sub-img img {
+  width: 100%;
   height: 340px;
-  margin: 0 auto;
+  object-fit: cover;
+  background: #f2e9d899;
+}
+/* subscribe 모바일 웹 환경 */
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .subscribe {
+    width: 100%;
+    max-width: 326px;
+
+    min-height: 348px;
+
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, 20%);
+  }
+  .sub-text-group {
+    height: auto;
+    text-align: left;
+    margin: 36px 32px 30px 32px;
+  }
+  .sub-text-group h3 {
+    width: 100%;
+    max-width: 187px;
+
+    height: 60px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+
+    margin-bottom: 18px;
+    margin-right: 23px;
+  }
+  .sub-text-group p {
+    height: 72px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .sub-email-group {
+    height: auto;
+    width: 262px;
+
+    display: block;
+    position: static;
+    margin: 0 auto;
+  }
+
+  .sub-email-group input {
+    width: 214px;
+    height: 40px;
+    background-size: 18px;
+    padding-left: 48px;
+    background-position: 16px center;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+  }
+  .sub-email-group button {
+    width: 115px;
+    margin-top: 20px;
+    height: 40px;
+
+    border-radius: 40px;
+    color: #fff;
+    background-color: #d97652;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+
+    position: static;
+    float: right;
+    margin-bottom: 20px;
+  }
+  .sub-img img {
+    width: 100%;
+    height: 240px;
+
+    background-position: center;
+  }
 }
 /* 푸터 스타일 */
 .footer-div {
