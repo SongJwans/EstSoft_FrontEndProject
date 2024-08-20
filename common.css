@@ -1,9 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
 
-/* 컨테이너 설정으로 중앙정렬 및 반응형 웹 구현 */
 .container {
-  max-width: 1280px; /* 최대 너비 설정 */
-  margin: 0 auto; /* 중앙 정렬 */
+  max-width: 1280px;
+  margin: 0 auto;
 }
 body {
   font-family: "Pretendard";
@@ -26,14 +25,14 @@ header {
   height: 40px;
 }
 
-.nav-links {
+.navigater {
   display: flex;
   align-items: center;
 }
-.nav-links span {
+.nav-links a {
   width: 43px;
   height: 20px;
-  margin: 0 15px;
+  margin: 0 15px; /* 없애도 되는 확인 */
 }
 .download-btn {
   width: 140px;
@@ -45,6 +44,97 @@ header {
   background-color: #d97652;
 }
 
+/* 초기 상태 */
+.menu-tab {
+  display: none;
+
+  width: 32px;
+  height: 32px;
+
+  background-image: url(img/menu.png);
+  background-size: cover;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+
+  cursor: pointer;
+}
+.close-btn {
+  display: none;
+
+  width: 32px;
+  height: 32px;
+
+  /* 베경 이미지 */
+  background-image: url(img/arrow-right.png);
+  background-size: cover;
+
+  /* 위치 지정 */
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .logo {
+    width: 92px;
+    height: 28px;
+  }
+
+  .menu-tab {
+    display: block;
+  }
+
+  .close-btn {
+    display: inline;
+    z-index: 1000;
+  }
+
+  /* 슬라이스 메뉴 CSS */
+  .navigater {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 289px;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .navigater.show {
+    /* navigater show를 block.. */
+    display: block;
+    right: 0;
+    width: 289px;
+    background-color: #263140;
+  }
+  .nav-links {
+    margin-top: 120px;
+    margin-left: 50px;
+  }
+  .nav-links a {
+    display: block;
+    width: auto;
+    height: 20px;
+
+    /* 메뉴 클릭시 변경 사항 */
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    color: white;
+
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+  .navigater .download-btn {
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+}
 /* header-content 부분 */
 .header-content {
   display: flex;
@@ -578,4 +668,51 @@ header {
   width: 228px;
   height: 42px;
   cursor: pointer;
+}
+.footer-menu {
+  display: none;
+  width: 84px;
+  height: 120px;
+
+  color: #767676;
+
+  position: relative;
+}
+.footer-menu a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  .footer-div {
+    height: 178px;
+    display: inline-block;
+    /* absolute를 이해해버림 */
+    position: relative;
+  }
+  .footer-logo img {
+    width: 112px;
+    height: 34px;
+    position: absolute;
+    top: 32px;
+    left: 20px;
+  }
+  .footer-icons img {
+    width: 176px;
+    height: 32px;
+    position: absolute;
+    left: 20px;
+    bottom: 24px;
+    cursor: pointer;
+  }
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    left: 285px;
+    gap: 16px;
+    text-align: right;
+  }
 }
