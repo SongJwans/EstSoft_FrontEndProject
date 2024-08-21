@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 메뉴 버튼 클릭 시, 슬라이드 메뉴 열기
-  const menuTab = document.querySelector(".menu-tab");
+  const menuTab = document.querySelector(".side-bar");
   if (menuTab) {
     menuTab.addEventListener("click", function () {
-      document.querySelector(".navigater").classList.add("show");
+      document.querySelector(".top-nav-element").classList.add("show");
     });
   }
 
@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelector(".close-btn");
   if (closeButton) {
     closeButton.addEventListener("click", function () {
-      document.querySelector(".navigater").classList.remove("show");
+      document.querySelector(".top-nav-element").classList.remove("show");
     });
   }
 });
-const scrollToTopBtn = document.querySelector(".scroll-top-btn");
+
+const scrollToTopBtn = document.getElementById("scroll-top-btn");
 const footer = document.querySelector("footer");
 
 window.addEventListener("scroll", function () {
@@ -26,15 +27,17 @@ window.addEventListener("scroll", function () {
     scrollToTopBtn.classList.remove("show");
   }
 
-  // 버튼이 푸터에 닿기 전에 멈추도록 설정
-  const footerTop = footer.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
+  // 스크롤 위치와 footer 위치 계산
+  const scrollY = window.scrollY;
+  const footerRect = footer.getBoundingClientRect();
+  const footerTop = footerRect.top + scrollY;
 
-  if (footerTop <= windowHeight) {
-    scrollToTopBtn.style.position = "absolute";
-    scrollToTopBtn.style.bottom = windowHeight - footerTop + 19 + "px";
+  // footer에 도달하면 버튼의 위치를 조정
+  if (scrollY + window.innerHeight > footerTop) {
+    scrollToTopBtn.style.bottom = `${
+      scrollY + window.innerHeight - footerTop + 19
+    }px`;
   } else {
-    scrollToTopBtn.style.position = "fixed";
     scrollToTopBtn.style.bottom = "19px";
   }
 });
@@ -46,14 +49,41 @@ scrollToTopBtn.addEventListener("click", function () {
   });
 });
 
-const openModal = document.getElementById("subscribe");
-const modal = document.getElementById("modalContainer");
-const closeModal = document.getElementById("close");
+// 이메일 유효성 검사하기
+const pattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-za-z0-9\-]+/;
 
-openModal.addEventListener("click", () => {
-  modal.classList.remove("hidden");
-});
+function emailValidChk(email) {
+  if (pattern.test(email) === false) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
-closeModal.addEventListener("click", () => {
-  modal.classList.add("hidden");
+document.addEventListener("DOMContentLoaded", () => {
+  constpattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-za-z0-9\-]+/;
+
+  function emailValidCheck(email) {
+    return pattern.test(email);
+  }
+  const openModal = document.getElementById("subscribe");
+  const modal = document.getElementById("modalContainer");
+  const closeModal = document.getElementById("close");
+  const emailInput = document.getElementById("emailInput");
+
+  openModal.addEventListener("click", () => {
+    const email = emailInput.value.trim();
+
+    if (!email) {
+      alert("이메일을 입력해 주세요.");
+    } else if (!emailValidCheck(email)) {
+      alert("유효하지 않은 이메일 형식입니다.");
+    } else {
+      modal.classList.remove("hidden");
+    }
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
 });
