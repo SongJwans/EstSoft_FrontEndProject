@@ -18,6 +18,9 @@ header {
 
     position: sticky;
     top: 0;
+
+    /* 카카오 맵이 z-index를 가져와서 */
+    z-index: 1000;
 }
 
 /* header bar 부분 */
@@ -108,7 +111,6 @@ header {
 
     .close-btn {
         display: inline;
-        z-index: 1000;
     }
 
     .navigation-bar {
@@ -756,6 +758,7 @@ header {
 }
 
 #modalContainer {
+    z-index: 1000;
     width: 100%;
     height: 100%;
     position: fixed;
