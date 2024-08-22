@@ -39,9 +39,8 @@ header {
 }
 
 /* 초기 상태 */
-.side-bar {
+.menu-tab {
     display: none;
-
     width: 32px;
     height: 32px;
 
@@ -105,7 +104,7 @@ header {
         height: 28px;
     }
 
-    .side-bar {
+    .menu-tab {
         display: flex;
     }
 
@@ -117,23 +116,27 @@ header {
         width: 100%;
         max-width: 350px;
     }
-
+    /* 모바일 화면 */
     /* 슬라이스 메뉴 CSS */
     .top-nav-element {
         display: none;
         position: fixed;
         top: 0;
-        height: 100%;
+
         width: 289px;
+        height: 100%;
         background-color: white;
         flex-direction: column;
+
+        /* 작동하지 않는 거 같음.. */
+        animation-timing-function: ease-out;
+        animation-duration: 300ms;
+
     }
 
     .top-nav-element.show {
-        /* navigater show를 block.. */
         display: block;
         right: 0;
-        width: 289px;
         background-color: #263140;
     }
 
@@ -177,6 +180,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #f2e9d8;
+    overflow: hidden;
 }
 
 .header-text-section {
@@ -211,17 +215,29 @@ header {
     margin-left: 0;
 }
 
-.header-image-section img {
+.header-image-section {
     width: 415px;
-    height: 788px;
+    height: 890px;
+    margin-top: 32px;
+}
+.header-image-section img {
+    width: 100%;
+    height: 100%;
     margin-top: 32px;
 }
 
 /* header 모바일 웹 화면 구상 */
 @media only screen and (max-width: 500px) and (orientation: portrait) {
+    header {
+        height: 76px;
+    }
+    #header {
+        height: 718px;
+    }
+
     .header-content {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -236,7 +252,7 @@ header {
         font-size: 24px;
         font-weight: 700;
         line-height: 30px;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .header-text-section p {
@@ -259,12 +275,15 @@ header {
         border-radius: 40px;
     }
 
-    .header-image-section img {
+    .header-image-section {
         width: 197px;
         height: 422px;
-        top: 434px;
-        left: 98px;
-        margin-top: 30px;
+    }
+
+    .header-image-section img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
     }
 }
 
@@ -443,19 +462,21 @@ header {
     margin-top: 28px;
 }
 
-.hr {
-    width: 1278px;
-    height: 1px;
-    color: #c4c4c4;
-}
+hr {
+    width: 100%;
+    max-width: 1280px;
 
+}
 /* Body second 모바일 웹 환경 */
 @media only screen and (max-width: 500px) and (orientation: portrait) {
     .bodysecond-text-section {
         text-align: center;
         margin-top: 60px;
     }
-
+    hr {
+        width: 100%;
+        max-width: 360px;
+    }
     .bodysecond-text-section h4 {
         width: 326px;
         font-size: 24px;
@@ -504,7 +525,6 @@ header {
 
 /* Body Third */
 .bodythird h2 {
-    width: 268px;
     height: 45px;
     font-size: 36px;
     font-weight: 700;
@@ -516,7 +536,6 @@ header {
 }
 
 .bodythird p {
-    width: 395px;
     height: 20px;
     font-size: 16px;
     font-weight: 500;
@@ -616,7 +635,11 @@ header {
     padding-left: 68px;
 
     background-color: #fff;
+
     font-size: 16px;
+}
+.sub-email-group input::placeholder {
+    color: #767676; /* 회색으로 변경 */
 }
 
 .sub-email-group button {
@@ -693,8 +716,8 @@ header {
     }
 
     .sub-email-group input {
-        width: 214px;
-        height: 40px;
+        width: 208px;
+        height: 34px;
         background-size: 18px;
         padding-left: 48px;
         background-position: 16px center;
@@ -707,20 +730,18 @@ header {
 
     .sub-email-group button {
         width: 115px;
-        margin-top: 20px;
         height: 40px;
-
-        border-radius: 40px;
-        color: #fff;
-        background-color: #d97652;
-
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
 
+        padding: 11px 24px;
+
         position: static;
         float: right;
-        margin-bottom: 20px;
+
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
 
     .sub-img img {
@@ -750,7 +771,7 @@ header {
 }
 
 #scroll-top-btn:hover {
-    background-image: url(img/scroll-top-btn2.png);
+    background-image: url(img/scroll-top-btn:hover.png);
 }
 
 #scroll-top-btn.show {
@@ -827,11 +848,6 @@ header {
 }
 
 @media only screen and (max-width: 500px) and (orientation: portrait) {
-    .scroll-top-btn {
-        width: 40px;
-        height: 40px;
-    }
-
     #modalPanel {
         width: 300px;
         height: 300px;
@@ -904,10 +920,13 @@ header {
 }
 
 @media only screen and (max-width: 500px) and (orientation: portrait) {
+    #scroll-top-btn{
+        width: 30px;
+        height: 30px;
+    }
     .footer-div {
         height: 178px;
         display: inline-block;
-        /* absolute를 이해해버림 */
         position: relative;
     }
 

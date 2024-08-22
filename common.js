@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 메뉴 버튼 클릭 시, 슬라이드 메뉴 열기
-  const menuTab = document.querySelector(".side-bar");
+  const menuTab = document.querySelector(".menu-tab");
   if (menuTab) {
     menuTab.addEventListener("click", function () {
       document.querySelector(".top-nav-element").classList.add("show");
