@@ -44,7 +44,7 @@ header {
     width: 32px;
     height: 32px;
 
-    background-image: url(img/menu.png);
+    background-image: url(../img/menu.png);
     background-size: cover;
     cursor: pointer;
 
@@ -62,7 +62,7 @@ header {
     height: 32px;
 
     /* 베경 이미지 */
-    background-image: url(img/arrow-right.png);
+    background-image: url(../img/arrow-right.png);
     background-size: cover;
 
     /* 위치 지정 */
@@ -379,7 +379,7 @@ hr {
     width: 100%;
 
     border-radius: 60px;
-    background: url(img/mail.png) no-repeat 28px center;
+    background: url(../img/mail.png) no-repeat 28px center;
     background-size: 24px;
     padding-left: 68px;
 
@@ -425,7 +425,7 @@ hr {
     width: 50px;
     height: 50px;
 
-    background-image: url(img/scroll-top-btn.png);
+    background-image: url(../img/scroll-top-btn.png);
     background-size: cover;
     background-color: transparent;
     cursor: pointer;
@@ -434,7 +434,7 @@ hr {
 }
 
 #scroll-top-btn:hover {
-    background-image: url(img/scroll-top-btn-hover.png);
+    background-image: url(../img/scroll-top-btn-hover.png);
 }
 
 #scroll-top-btn.show {
@@ -455,7 +455,7 @@ hr {
 }
 
 #modalPanel {
-    background-image: url(img/modal-background.png);
+    background-image: url(../img/modal-background.png);
     background-size: cover;
 
     width: 600px;
