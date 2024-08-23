@@ -128,7 +128,6 @@ header {
         height: 100%;
         background-color: white;
         flex-direction: column;
-
     }
 
     .top-nav-element.show {
@@ -140,8 +139,8 @@ header {
 
     .top-nav-element.hide {
         animation: slide-out 0.3s ease-out;
-        opacity: 0;
     }
+
     @keyframes slide-in {
         0% {
             transform: translateX(100%);
