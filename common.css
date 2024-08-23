@@ -93,99 +93,6 @@ header {
     background-color: #d97652;
 }
 
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    .header-bar {
-        width: 350px;
-        padding: 24px 20px;
-    }
-
-    .logo {
-        width: 92px;
-        height: 28px;
-    }
-
-    .menu-tab {
-        display: flex;
-    }
-
-    .close-btn {
-        display: inline;
-    }
-
-    .navigation-bar {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    /* 모바일 화면 */
-    /* 슬라이스 메뉴 CSS */
-    .top-nav-element {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 289px;
-        height: 100%;
-        background-color: white;
-        flex-direction: column;
-    }
-
-    .top-nav-element.show {
-        display: block;
-        right: 0;
-        background-color: #263140;
-        animation: slide-in 0.3s ease-out;
-    }
-
-    .top-nav-element.hide {
-        animation: slide-out 0.3s ease-out;
-    }
-
-    @keyframes slide-in {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes slide-out {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(100%);
-        }
-    }
-
-    .nav-links {
-        margin-top: 120px;
-        margin-left: 50px;
-    }
-
-    .nav-links a {
-        display: block;
-        width: auto;
-        height: 20px;
-
-        /* 메뉴 클릭시 변경 사항 */
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 20px;
-        text-align: left;
-        color: white;
-
-        margin: 0px;
-        margin-bottom: 30px;
-    }
-
-    .top-nav-element .download-btn {
-        margin-left: 40px;
-        margin-top: 20px;
-    }
-}
-
 #header {
     height: 818px;
     background-color: #f2e9d8;
@@ -246,68 +153,6 @@ header {
     margin-top: 32px;
 }
 
-/* header 모바일 웹 화면 구상 */
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    header {
-        height: 76px;
-    }
-
-    #header {
-        height: 718px;
-    }
-
-    .header-content {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .header-text-section {
-        text-align: center;
-    }
-
-    .header-text-section h1 {
-        width: 251px;
-        height: 90px;
-
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
-        margin-top: 40px;
-    }
-
-    .header-text-section p {
-        width: 270px;
-        height: 98px;
-        top: 236px;
-        left: 57px;
-
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 18px;
-        margin-top: 30px;
-    }
-
-    .header-text-section button {
-        width: 114px;
-        height: 40px;
-        padding: 11px 24px 11px 24px;
-        margin-top: 30px;
-        border-radius: 40px;
-    }
-
-    .header-image-section {
-        width: 197px;
-        height: 422px;
-    }
-
-    .header-image-section img {
-        width: 100%;
-        height: 100%;
-        margin-top: 0px;
-    }
-}
-
 /* Body 영역 총 BodyFirst, BodySecond,BodyThird,subscribe 4가지 영역을 구분  */
 
 /* BodyFirst */
@@ -350,43 +195,6 @@ header {
     line-height: 20px;
 
     margin-top: 30px;
-}
-
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    .BodyFirst {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
-    }
-
-    .BodyFirst img {
-        width: 326px;
-        height: 190px;
-
-        margin: 40px 32px;
-    }
-
-    .bodyfirst-text-section {
-        width: 326px;
-        text-align: left;
-    }
-
-    .bodyfirst-text-section h1 {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
-
-        height: 90px;
-    }
-
-    .bodyfirst-text-section p {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 18px;
-
-        height: 36px;
-    }
 }
 
 /* Body Second */
@@ -489,64 +297,6 @@ hr {
 
 }
 
-/* Body second 모바일 웹 환경 */
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    .bodysecond-text-section {
-        text-align: center;
-        margin-top: 60px;
-    }
-
-    hr {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .bodysecond-text-section h4 {
-        width: 326px;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
-        text-align: center;
-    }
-
-    .bodysecond-text-section p {
-        width: 326px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
-        text-align: center;
-    }
-
-    .bodysecond-image-section div {
-        width: 326px;
-        display: inline;
-    }
-
-    .frame3,
-    .frame4 {
-        display: block;
-    }
-
-    .frame3 img,
-    .frame4 img {
-        width: 326px;
-        height: 326px;
-        margin: 32px 32px 0 32px;
-    }
-
-    .frame5 {
-        width: 218px;
-        margin: 60px auto;
-    }
-
-    .frame5 span {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 24px;
-        text-align: center;
-    }
-}
-
 /* Body Third */
 .bodythird h2 {
     height: 45px;
@@ -575,31 +325,6 @@ hr {
     width: 100%;
     max-width: 1280px;
     border-radius: 12px;
-}
-
-/* Body third 모바일 웹 환경 */
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    .bodythird {
-        width: 100%;
-
-        max-width: 326px;
-        margin: 0 auto;
-    }
-
-    .bodythird-text-section h2 {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
-    }
-
-    .bodythird-text-section p {
-        /* width 100% 가 매우 중요 */
-        width: 100%;
-
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 20px;
-    }
 }
 
 /* subscribes */
@@ -688,93 +413,6 @@ hr {
     height: 340px;
     object-fit: cover;
     background: #f2e9d899;
-}
-
-/* subscribe 모바일 웹 환경 */
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    .subscribe {
-        width: 100%;
-        max-width: 326px;
-
-        min-height: 348px;
-
-        display: flex;
-        flex-direction: column;
-        transform: translate(-50%, 20%);
-    }
-
-    .sub-text-group {
-        height: auto;
-        text-align: left;
-        margin: 36px 32px 30px 32px;
-    }
-
-    .sub-text-group h3 {
-        width: 100%;
-        max-width: 187px;
-
-        height: 60px;
-
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
-        text-align: left;
-
-        margin-bottom: 18px;
-        margin-right: 23px;
-    }
-
-    .sub-text-group p {
-        height: 72px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 18px;
-    }
-
-    .sub-email-group {
-        height: auto;
-        width: 262px;
-
-        display: block;
-        position: static;
-        margin: 0 auto;
-    }
-
-    .sub-email-group input {
-        width: 208px;
-        height: 34px;
-        background-size: 18px;
-        padding-left: 48px;
-        background-position: 16px center;
-
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
-        text-align: left;
-    }
-
-    .sub-email-group button {
-        width: 115px;
-        height: 40px;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 18px;
-
-        padding: 11px 24px;
-
-        position: static;
-        float: right;
-
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
-
-    .sub-img img {
-        width: 100%;
-        height: 240px;
-
-        background-position: center;
-    }
 }
 
 /* scroll-top-btn */
@@ -872,43 +510,6 @@ hr {
     margin-top: 38px;
 }
 
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    #modalPanel {
-        width: 300px;
-        height: 300px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: #f2e9d8;
-    }
-
-    #modalPanel img {
-        width: 60px;
-        height: 62px;
-        margin-top: 40px;
-    }
-
-    #modalPanel h3 {
-        width: 126px;
-        font-size: 24px;
-        line-height: 30px;
-    }
-
-    #modalPanel p {
-        width: 189px;
-        font-weight: 400;
-        line-height: 18px;
-        margin-top: 10px;
-    }
-
-    #modalPanel button {
-        width: 158px;
-        height: 40px;
-        padding: 11px 24px;
-        gap: 10px;
-        margin-top: 28px;
-    }
-}
-
 /* 푸터 스타일 */
 .footer-div {
     height: 160px;
@@ -942,44 +543,4 @@ hr {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-}
-
-@media only screen and (max-width: 500px) and (orientation: portrait) {
-    #scroll-top-btn {
-        width: 30px;
-        height: 30px;
-    }
-
-    .footer-div {
-        height: 178px;
-        display: inline-block;
-        position: relative;
-    }
-
-    .footer-logo img {
-        width: 112px;
-        height: 34px;
-        position: absolute;
-        top: 32px;
-        left: 20px;
-    }
-
-    .footer-icons img {
-        width: 176px;
-        height: 32px;
-        position: absolute;
-        left: 20px;
-        bottom: 24px;
-        cursor: pointer;
-    }
-
-    .footer-menu {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 30px;
-        left: 285px;
-        gap: 16px;
-        text-align: right;
-    }
 }
