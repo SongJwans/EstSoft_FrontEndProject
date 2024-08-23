@@ -116,21 +116,18 @@ header {
         width: 100%;
         max-width: 350px;
     }
+
     /* 모바일 화면 */
     /* 슬라이스 메뉴 CSS */
     .top-nav-element {
         display: none;
         position: fixed;
         top: 0;
-
+        right: -100%;
         width: 289px;
         height: 100%;
         background-color: white;
         flex-direction: column;
-
-        /* 작동하지 않는 거 같음.. */
-        animation-timing-function: ease-out;
-        animation-duration: 300ms;
 
     }
 
@@ -138,6 +135,29 @@ header {
         display: block;
         right: 0;
         background-color: #263140;
+        animation: slide-in 0.3s ease-out;
+    }
+
+    .top-nav-element.hide {
+        animation: slide-out 0.3s ease-out;
+        opacity: 0;
+    }
+    @keyframes slide-in {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-out {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100%);
+        }
     }
 
     .nav-links {
@@ -220,6 +240,7 @@ header {
     height: 890px;
     margin-top: 32px;
 }
+
 .header-image-section img {
     width: 100%;
     height: 100%;
@@ -231,6 +252,7 @@ header {
     header {
         height: 76px;
     }
+
     #header {
         height: 718px;
     }
@@ -467,16 +489,19 @@ hr {
     max-width: 1280px;
 
 }
+
 /* Body second 모바일 웹 환경 */
 @media only screen and (max-width: 500px) and (orientation: portrait) {
     .bodysecond-text-section {
         text-align: center;
         margin-top: 60px;
     }
+
     hr {
         width: 100%;
         max-width: 360px;
     }
+
     .bodysecond-text-section h4 {
         width: 326px;
         font-size: 24px;
@@ -638,6 +663,7 @@ hr {
 
     font-size: 16px;
 }
+
 .sub-email-group input::placeholder {
     color: #767676; /* 회색으로 변경 */
 }
@@ -771,7 +797,7 @@ hr {
 }
 
 #scroll-top-btn:hover {
-    background-image: url(img/scroll-top-btn:hover.png);
+    background-image: url(img/scroll-top-btn-hover.png);
 }
 
 #scroll-top-btn.show {
@@ -920,10 +946,11 @@ hr {
 }
 
 @media only screen and (max-width: 500px) and (orientation: portrait) {
-    #scroll-top-btn{
+    #scroll-top-btn {
         width: 30px;
         height: 30px;
     }
+
     .footer-div {
         height: 178px;
         display: inline-block;
