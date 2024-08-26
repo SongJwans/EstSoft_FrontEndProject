@@ -1,5 +1,6 @@
 @media only screen and (max-width: 500px) and (orientation: portrait) {
-    .header-bar {
+    /* header */
+    .top-navigation-bar {
         width: 350px;
         padding: 24px 20px;
     }
@@ -32,7 +33,7 @@
         background-color: white;
         flex-direction: column;
     }
-
+    /* menu-tab animation */
     .top-nav-element.show {
         display: block;
         right: 0;
@@ -255,13 +256,13 @@
         transform: translate(-50%, 20%);
     }
 
-    .sub-text-group {
+    .sub-text-section {
         height: auto;
         text-align: left;
         margin: 36px 32px 30px 32px;
     }
 
-    .sub-text-group h3 {
+    .sub-text-section h3 {
         width: 100%;
         max-width: 187px;
         height: 60px;
@@ -273,14 +274,14 @@
         margin-right: 23px;
     }
 
-    .sub-text-group p {
+    .sub-text-section p {
         height: 72px;
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
     }
 
-    .sub-email-group {
+    .sub-input-section {
         height: auto;
         width: 262px;
         display: block;
@@ -288,7 +289,7 @@
         margin: 0 auto;
     }
 
-    .sub-email-group input {
+    .sub-input-section input {
         width: 208px;
         height: 34px;
         background-size: 18px;
@@ -300,7 +301,7 @@
         text-align: left;
     }
 
-    .sub-email-group button {
+    .sub-input-section button {
         width: 115px;
         height: 40px;
         font-size: 14px;

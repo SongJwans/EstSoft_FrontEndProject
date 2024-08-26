@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return pattern.test(email);
     }
 
-    const openModal = document.getElementById("subscribe");
+    const openModal = document.getElementById("subscribe-btn");
     const modal = document.getElementById("modalContainer");
     const closeModal = document.getElementById("close");
     const emailInput = document.getElementById("emailInput");
