@@ -4,10 +4,8 @@
 [피그마 링크](https://www.figma.com/design/s9RCnA6dSi3QHHeMDFHKE6/EST-%EC%98%A4%EB%A5%B4%EB%AF%B8(BE)_HTML%2FCSS%2FJS?node-id=28501-4177&t=gpv3t28WAalztcGv-1)
 
 PC 화면
-[img]
 
-Mobile 화면
-[mobile 화면]
+Mobile 화면 width 500px 이하, orientation: portrait 일 때
 
 ### 1.2 요구사항 명세
 1. 모바일 화면도 고려하여 페이지를 구현합니다.
@@ -31,7 +29,7 @@ Mobile 화면
   - 서비스 배포 환경
     * github pages
 ### 2.2 배포 URL
-	- https://songjwans.github.io/estSoft_FrontEndProject
+ https://songjwans.github.io/estSoft_FrontEndProject
 
 ## 3. 느낀점 
 
