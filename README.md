@@ -1,13 +1,13 @@
-# FrontEndProject
+# FrontEndProject 
 ## 1. 목표와 요구사항
 ### 1.1 피그마 링크와 요구사항 명세를 참고하여 랜딩페이지 만들기 
 [피그마 링크](https://www.figma.com/design/s9RCnA6dSi3QHHeMDFHKE6/EST-%EC%98%A4%EB%A5%B4%EB%AF%B8(BE)_HTML%2FCSS%2FJS?node-id=28501-4177&t=gpv3t28WAalztcGv-1)
 
-PC 화면 
+### PC 화면 
 ![img.png](img/README/pc1.png)
 ![img.png](img/README/pc2.png)
 
-Mobile 화면 
+### Mobile 화면 
 width 500px 이하, orientation: portrait 일 때
 
 ![img.png](img/README/mobile1.png)
@@ -81,11 +81,19 @@ https://songjwans.github.io/estSoft_FrontEndProject
     ┣ 📜README.md
     ┗ 📜index.html
 
-- 메인이 되는 랜딩 페이지는 index.html
-- CSS, JavaScript 파일로 분리
+- CSS
+  - common.css : PC CSS
+  - mobile.css : 웹 모바일 CSS
+  - kakao.css : 카카오 map api CSS
+- javascript
+  - common.js : PC JS
+  - kakaoMap.js : 카카오 map api JS
+- img : 페이지에 들어가는 이미지 
 - practice : modal, 카카오 map api 연습용
+- index.html : 메인이 되는 랜딩 페이지
 
-## 느낀점 
+
+###  느낀점 
 - 정말 디테일한 페이지를 구현하기 위해서는 개발자의 시간과 노력이 필요하다는 것은 느꼈습니다.
 - CSS 부분 중 항상 대충 넘어갔던 layout, display 등에 익숙해졌고 활용할 수 있게 되었습니다.
 - 프론트엔드에 대해 다시 한번 생각해 볼 수 있는 시간이 된거 같습니다.
