@@ -34,8 +34,58 @@ width 500px 이하, orientation: portrait 일 때
     * IntelliJ IDEA
   - 서비스 배포 환경
     * github pages
-### 2.2 배포 URL
- https://songjwans.github.io/estSoft_FrontEndProject
+### 2.2 배포 URL 
+https://songjwans.github.io/estSoft_FrontEndProject
 
-## 3. 느낀점 
+## 3.프로젝트 구조
 
+    ┣ 📂estsoft-FrontEndProject
+    ┣ 📂CSS
+    ┃ ┣ 📜common.css
+    ┃ ┣ 📜kakao.css
+    ┃ ┣ 📜mobile.css
+    ┃ ┗ 📜reset.css
+    ┣ 📂img
+    ┃ ┣ 📂README
+    ┃ ┃ ┣ 📜mobile1.png
+    ┃ ┃ ┣ 📜mobile2.png
+    ┃ ┃ ┣ 📜pc1.png
+    ┃ ┃ ┗ 📜pc2.png
+    ┃ ┣ 📜.DS_Store
+    ┃ ┣ 📜Logo-fin.png
+    ┃ ┣ 📜arrow-right.png
+    ┃ ┣ 📜cat1.png
+    ┃ ┣ 📜footer-icon-group.png
+    ┃ ┣ 📜image 1.png
+    ┃ ┣ 📜img_1-1.png
+    ┃ ┣ 📜img_1.png
+    ┃ ┣ 📜img_2-1.png
+    ┃ ┣ 📜img_2.png
+    ┃ ┣ 📜img_3-1.png
+    ┃ ┣ 📜img_3.png
+    ┃ ┣ 📜img_4.png
+    ┃ ┣ 📜img_5.png
+    ┃ ┣ 📜img_cat.png
+    ┃ ┣ 📜mail.png
+    ┃ ┣ 📜menu.png
+    ┃ ┣ 📜modal-background.png
+    ┃ ┣ 📜scroll-top-btn-hover.png
+    ┃ ┗ 📜scroll-top-btn.png
+    ┣ 📂javaScript
+    ┃ ┣ 📜common.js
+    ┃ ┗ 📜kakaoMap.js
+    ┣ 📂practice
+    ┃ ┣ 📜map.html
+    ┃ ┗ 📜modal.html
+    ┣ 📜.DS_Store
+    ┣ 📜README.md
+    ┗ 📜index.html
+
+- 메인이 되는 랜딩 페이지는 index.html
+- CSS, JavaScript 파일로 분리
+- practice : modal, 카카오 map api 연습용
+
+## 느낀점 
+- 정말 디테일한 페이지를 구현하기 위해서는 개발자의 시간과 노력이 필요하다는 것은 느꼈습니다.
+- CSS 부분 중 항상 대충 넘어갔던 layout, display 등에 익숙해졌고 활용할 수 있게 되었습니다.
+- 프론트엔드에 대해 다시 한번 생각해 볼 수 있는 시간이 된거 같습니다.
